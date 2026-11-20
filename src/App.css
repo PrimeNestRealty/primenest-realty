@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background: #090909;
+  font-synthesis: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #090909;
+  color: #ffffff;
+}
+
+header {
+  background: #090909;
+  border-bottom: 1px solid #b99a5b;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  max-width: 1250px;
+  margin: auto;
+  padding: 23px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+nav h2 span,
+.gold-text {
+  color: #d4af69;
+}
+
+nav a {
+  margin-left: 24px;
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #d4af69;
+}
+
+.hero {
+  min-height: 580px;
+  padding: 130px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background:
+    linear-gradient(90deg, #000000e8, #00000055),
+    url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1800')
+    center/cover;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1.15;
+  margin: 20px 0;
+  max-width: 800px;
+}
+
+.hero p {
+  color: #dddddd;
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+
+.gold-text {
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+button {
+  background: #d4af69;
+  color: #111111;
+  padding: 16px 28px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #f0d89d;
+  transform: translateY(-2px);
+}
+
+.search-section {
+  background: #151515;
+  text-align: center;
+}
+
+.search-section h2,
+#properties h2,
+#about h2 {
+  font-size: 34px;
+  margin: 15px 0;
+}
+
+.search-controls {
+  max-width: 900px;
+  margin: 30px auto 0;
+  display: flex;
+  gap: 15px;
+}
+
+.search-controls input,
+.search-controls select {
+  flex: 1;
+  min-width: 0;
+  padding: 17px;
+  background: #222222;
+  border: 1px solid #b99a5b;
+  color: white;
+  border-radius: 4px;
+}
+
+#properties {
+  padding: 80px 7%;
+}
+
+#properties > p {
+  margin-bottom: 18px;
+  color: #cccccc;
+}
+
+#properties .gold-text {
+  color: #d4af69;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.property-card {
+  background: #171717;
+  border: 1px solid #38302a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af69;
+}
+
+.property-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 20px;
+}
+
+.property-info h3 {
+  margin: 12px 0;
+  font-size: 19px;
+}
+
+.property-info p {
+  margin: 9px 0;
+  color: #cccccc;
+}
+
+.property-info .price {
+  color: #d4af69;
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 17px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  margin-top: 35px;
+}
+
+#about {
+  padding: 80px 8%;
+  background: #151515;
+  line-height: 1.8;
+}
+
+#about > p:last-child {
+  max-width: 750px;
+  color: #cccccc;
+}
+
+footer {
+  padding: 55px 7%;
+  background: #050505;
+  border-top: 1px solid #b99a5b;
+  text-align: center;
+  line-height: 2;
+}
+
+footer h2 {
+  color: #d4af69;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  nav a {
+    margin: 0 8px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 75px 7%;
+  }
+
+  .search-controls {
+    flex-direction: column;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #080808;
+  color: #ffffff;
+}
+
+.contact-section h2 {
+  color: #d4af37;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  background: #151515;
+  border: 1px solid #b89635;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaaaaa;
+}
+
+.contact-form button {
+  padding: 16px;
+  background: #d4af37;
+  color: #080808;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #f0cf68;
+}
